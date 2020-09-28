@@ -1,0 +1,100 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-head {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 600!important;
+    font-size: medium;
+    padding-top: 20px;
+}
+
+.container {
+    /* background-color: rgb(246, 208, 84); */
+    margin-top: 2%;
+    padding-bottom: 10px;
+}
+
+.main {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 50px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.main-card {
+    padding: 20px;
+    /* border-radius: 50px; */
+    border-bottom-left-radius:50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    min-height: 550px;
+}
+
+.nav-btn-name {
+    font-weight: bold;
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .welcome-head {
+        font-size: x-large;
+    }
+
+    .main {
+        width: 75%;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .welcome-head {
+        font-size: xx-large;
+    }
+
+    .main {
+        width: 75%;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .welcome-head {
+        font-size: xx-large;
+    }
+
+    .main {
+        width: 75%;
+    }
+
+}
+
+@media (min-width: 1201px){
+
+    .welcome-head {
+        font-size: xx-large;
+    }
+
+    .main {
+        width: 75%;
+    }
+
+}
