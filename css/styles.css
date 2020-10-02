@@ -1,9 +1,10 @@
+/* 
 * {
     font-family: 'Montserrat', sans-serif;
-}
+}*/
 
 .welcome-head {
-    /* font-family: 'Montserrat', sans-serif; */
+     font-family: 'Montserrat', sans-serif; 
     font-weight: 600!important;
     font-size: medium;
     padding-top: 20px;
@@ -48,6 +49,10 @@
 
 .nav-btn-name {
     font-weight: bold;
+}
+
+.tab-content{
+    font-family: 'Montaga', serif;
 }
 
 
