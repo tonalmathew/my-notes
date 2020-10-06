@@ -26,6 +26,12 @@
     border-radius: 50px;
 }
 
+.btn{
+    margin-top: 20px;
+    margin-left: 90%;
+
+}
+
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
@@ -44,7 +50,7 @@
     border-bottom-left-radius:50px;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
-    min-height: 550px;
+    min-height: 350px;
 }
 
 .nav-btn-name {
