@@ -1,2 +1,2 @@
 # my-notes
-A web application
+A Simple Web Application
