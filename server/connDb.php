@@ -12,7 +12,8 @@
     }
 
     if($action == 'read'){
-        $sql = $conn->query("SELECT * FROM users");
+        $email = $_POST['email'];
+        $sql = $conn->query("SELECT * FROM users WHERE email='$email'");
         $users = array();
         while($row = $sql->fetch_assoc()){
             array_push($users, $row);
@@ -27,11 +28,11 @@
         $sql = $conn->query("INSERT INTO users (name,email,password) VALUES('$name','$email','$password')");
         
         if($sql){
-            $result['message'] = "User added sucessfully!";
+            $result['message'] = "sucessfully Registered";
         }
         else{
             $result['error'] = true;
-            $result['message'] = "Failed to add user!";
+            $result['message'] = "User already exist";
         }
     }
 
