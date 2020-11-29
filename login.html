@@ -91,6 +91,9 @@
                                     <input v-model="loginUser.email" type="mail" placeholder="Enter e-mail" class="form-control my-3 p-4">
                                 </div>
                             </div>
+                            <div v-if="active" class="alert alert-danger" role="alert">
+                                Invalid Password
+                            </div>
                             <div class="form-row">
                                 <div class="col-lg-7">
                                     <input v-model="loginUser.password" type="password" placeholder="********" class="form-control my-3 p-4">
@@ -98,7 +101,7 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <button @click="addUser()" type="button" class="btn btn-outline-dark btn-lg mt-3 mb-5">Login</button>
+                                    <button @click="verifyUser()" type="button" class="btn btn-outline-dark btn-lg mt-3 mb-5">Login</button>
                                 </div>
                             </div>
 
@@ -120,21 +123,30 @@
             data: {
                 loginUser: {
                     email: '',
-                    // password: '',
+                    password: '',
                 },
                 responseOk: false,
+                active: false,
+
             },
             methods: {
-                addUser() {
+                verifyUser() {
                     var formData = this.toFormData(this.loginUser);
+                    const enteredPass = this.loginUser.password;
                     // var saveUser = this.newUser
                     // console.log(saveUser)
-                    axios.post('http://localhost/my-notes/process.php?action=read', formData)
+                    axios.post('http://localhost/my-notes/server/login.php?action=create', formData)
                         .then(function(response) {
-                            console.log(response);
-                            this.responseOk = true;
-                            // this.openAccount();
-                            // window.location.href = "index.html";
+                            // console.log(response.data.users[0]);
+                            // console.log(enteredPass);
+                            const userDbPass = response.data.users[0].password;;
+                            if (enteredPass == userDbPass) {
+                                this.responseOk = true;
+                                window.location.href = "index.html";
+                            } else {
+                                console.log("incorrect username or password");
+                                this.active = true;
+                            }
                         })
                         .catch(function(error) {
                             console.log(error);

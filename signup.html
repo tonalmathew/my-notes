@@ -80,6 +80,10 @@
                 margin-top: 10px;
                 text-align: left;
             }
+            p {
+                width: 270px;
+                margin-bottom: 40px;
+            }
         }
     </style>
 </head>
@@ -123,6 +127,7 @@
                             </div>
                         </form>
                     </div>
+                    <p>Already have an account? <a href="login.html">login.</a></p>
                 </div>
             </div>
         </div>
@@ -151,14 +156,15 @@
                 // },
                 addUser() {
                     var formData = this.toFormData(this.newUser);
+                    console.log(formData);
                     // var saveUser = this.newUser
                     // console.log(saveUser)
-                    axios.post('http://localhost/my-notes/process.php?action=create', formData)
+                    axios.post('http://localhost/my-notes/server/register.php?action=create', formData)
                         .then(function(response) {
                             console.log(response);
                             this.responseOk = true;
                             // this.openAccount();
-                            window.location.href = "index.html";
+                            // window.location.href = "index.html";
                         })
                         .catch(function(error) {
                             console.log(error);
