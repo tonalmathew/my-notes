@@ -2,6 +2,9 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }*/
+body{
+    background-color: #3F3D56;
+}
 
 .welcome-head {
     font-family: 'Montserrat', sans-serif;
@@ -19,6 +22,7 @@
 .main {
     width: 100%;
     margin: 50px auto;
+
 }
 
 .has-search .form-control {
@@ -52,7 +56,7 @@
     border-top-right-radius: 50px;
     min-height: 350px;
 }
-
+main
 .nav-btn-name {
     font-weight: bold;
 }
@@ -62,6 +66,7 @@
 }
 
 .container-inside {
+    
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
@@ -105,6 +110,7 @@
 .my-float {
     margin-top: 22px;
 }
+
 
 
 @media (min-width: 576px) and (max-width: 768px) {
